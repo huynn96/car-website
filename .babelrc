@@ -1,0 +1,17 @@
+{
+  "presets": ["node8"],
+  "plugins": [
+    "transform-decorators-legacy",
+    "dynamic-import-node",
+    ["module-resolver", {
+      "alias": {
+        "^Fusion/(.+)": "@sphinx-software/fusion/build/Fusion/\\1",
+        "Fusion": "@sphinx-software/fusion/build/Fusion",
+        "WaveFunction": "@sphinx-software/wave-function",
+
+        "^App/(.+)": "./src/App/\\1",
+        "^Tests(.*)": "./test/Tests\\1"
+      }
+    }]
+  ]
+}
